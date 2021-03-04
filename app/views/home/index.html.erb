@@ -71,17 +71,17 @@
       </div>
     </div>
     <div class="w-full py-4 sm:px-12 px-4 bg-gray-100 dark:bg-gray-700 mt-6 flex justify-end rounded-bl rounded-br">
-      <button class="btn text-sm focus:outline-none text-gray-600 border border-gray-300 dark:hover:border-gray-500 py-2 px-6 mr-4 rounded hover:bg-gray-200 transition duration-150 ease-in-out">Restore</button>
+      <button id="reset-form" class="btn text-sm focus:outline-none text-gray-600 border border-gray-300 dark:hover:border-gray-500 py-2 px-6 mr-4 rounded hover:bg-gray-200 transition duration-150 ease-in-out">Start Over</button>
       <button class="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none" type="submit">Save</button>
-      <%= link_to '#', class: "float-right w-48 block mx-2 flex justify-evenly items-center bg-white transition duration-150 ease-in-out hover:border-gray-900 hover:text-gray-900 rounded border border-gray-800 text-gray-800 pl-3 pr-6 py-2 text-lg" do %>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy mx-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/>
-          <circle cx="12" cy="14" r="2"/>
-          <polyline points="14 4 14 8 8 8 8 4"/>
-        </svg>
-        Submit
-      <% end %>
+      <%#= link_to '#', class: "float-right w-48 block mx-2 flex justify-evenly items-center bg-white transition duration-150 ease-in-out hover:border-gray-900 hover:text-gray-900 rounded border border-gray-800 text-gray-800 pl-3 pr-6 py-2 text-lg" do %>
+<!--        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy mx-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">-->
+<!--          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>-->
+<!--          <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/>-->
+<!--          <circle cx="12" cy="14" r="2"/>-->
+<!--          <polyline points="14 4 14 8 8 8 8 4"/>-->
+<!--        </svg>-->
+<!--        Submit-->
+      <%# end %>
     </div>
 
 <% end %>
@@ -102,6 +102,12 @@
         ageInput.val(1);
         interestsInput.val('');
       }
+    })
+
+    $('#reset-form').on('click', function(e){
+      e.preventDefault();
+      $('input, textarea').val('')
+      $('.results').html('')
     })
   })
 </script>
