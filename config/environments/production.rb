@@ -6,7 +6,7 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.compile = false
-  config.force_ssl = true
+  config.force_ssl = false
   config.active_storage.service = :local
   config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
