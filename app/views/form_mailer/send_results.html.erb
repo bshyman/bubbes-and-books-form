@@ -1,0 +1,23 @@
+<div>
+  Bubbe & Books Form Results
+</div>
+<br>
+<div>
+  <div>Bubbe info
+    <div style="margin-left: 20px;">
+      <label for="">Name: <strong><%= @bubbe.name %></strong></label><br>
+      <label for="">Email: <strong><%= @bubbe.email %></strong></label><br>
+      <br>
+      <div>
+        Children: <br>
+        <div style="margin-left: 20px;">
+          <% @bubbe.children.each do |child| %>
+            <label for="">Name: <strong><%= child.name %></strong></label><br>
+            <label for="">Age: <strong><%= child.age %></strong></label><br>
+            <label for="">Interests: <strong><%= child.interests %></strong></label><br>
+            <hr style="width: 100px;">
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
