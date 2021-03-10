@@ -168,6 +168,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.1.1)
     rexml (3.2.4)
+    rollbar (3.1.2)
     rubocop (1.10.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -243,6 +244,7 @@ DEPENDENCIES
   pg
   puma
   rails
+  rollbar
   rubocop
   rubocop-performance
   rubocop-rails

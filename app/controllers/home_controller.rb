@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     bubs = Bubbe.create(name: mishpacha_params[:bubbe_name], email: mishpacha_params[:email])
     mishpacha_params[:children].to_h.each { |_, child_params| bubs.children.create(child_params) }
     FormMailer.new.send_results(bubs).deliver
-    redirect_to root_path, notice: 'Your form has been submitted!'
+    render json: {success: true}, status: :ok
   end
   
   private
