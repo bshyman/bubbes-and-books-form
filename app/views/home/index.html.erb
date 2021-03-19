@@ -7,7 +7,7 @@
   <div class="container mx-auto shadow bg-white dark:bg-gray-800 rounded">
     <div class="md:w-10/12 mx-auto">
       <div class="mx-auto xl:mx-0">
-        <div class="bg-center bg-cover bg-no-repeat rounded relative sm:mt-8 h-96 py-4">
+        <div class="bg-center bg-cover bg-no-repeat rounded relative sm:mt-8 h-48 sm:h-72 md:h-96 py-4">
           <%= image_tag 'hero.png', class:"w-full h-full object-cover overflow-hidden rounded shadow" %>
           <div class="w-20 h-20 rounded-full bg-cover bg-center bg-no-repeat absolute bottom-0 -mb-10 ml-12 shadow">
             <%= image_tag 'profilepic.jpg', class: "w-full h-full object-cover overflow-hidden absolute z-0 rounded-full shadow" %>
@@ -16,11 +16,11 @@
         <div class="w-11/12 md:grid md:grid-cols-2 md:gap-4 mx-auto">
           <div class="mt-16 flex flex-col">
             <label for="bubbe_name" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Name</label>
-            <%= f.text_field :bubbe_name, placeholder: 'Enter full name', class: "border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 text-gray-800 bg-transparent dark:text-gray-100" %>
+            <%= f.text_field :bubbe_name, placeholder: 'What should I call you?', class: "border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 text-gray-800 bg-transparent dark:text-gray-100" %>
           </div>
           <div class="mt-4 md:mt-16 flex flex-col">
             <label for="email" class="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100">Email</label>
-            <%= f.text_field :email, placeholder: "username@example.com", class: "border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent resize-none text-gray-800 dark:text-gray-100" %>
+            <%= f.text_field :email, placeholder: "youremail@example.com", class: "border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent resize-none text-gray-800 dark:text-gray-100" %>
           </div>
           <div class="border border-gray-300 p-4 rounded col-span-2 xl:col-auto mt-4 md:mt-auto">
             <div class="flex justify-between">
